@@ -51,25 +51,29 @@ dd/mm/2023	1.0.0.1		XXX, Skyline	Initial version
 
 namespace HelloWorldSP_1
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Globalization;
-	using System.Text;
-	using Skyline.DataMiner.Automation;
-	
+    using System;
+    using Skyline.DataMiner.Automation;
+
 	/// <summary>
 	/// Represents a DataMiner Automation script.
 	/// </summary>
-	public class Script
+    public class Script
 	{
+		#region Public methods
+
 		/// <summary>
 		/// The script entry point.
 		/// </summary>
 		/// <param name="engine">Link with SLAutomation process.</param>
 		public void Run(IEngine engine)
 		{
-			engine.GenerateInformation("Hello World Change Here!!");
-			engine.GenerateInformation("Hello World Change Here!!");
+			Logger logger = new Logger(engine);
+
+			for(int i = 0; i < 5; i++)
+			{
+				logger.Log("Hello World Change Here!!");
+			}
 		}
+		#endregion
 	}
 }
