@@ -69,6 +69,7 @@ namespace HelloWorldSP_1
 		public void Run(IEngine engine)
 		{
 			engine.GenerateInformation("Hello World Change Here!!");
+			engine.GenerateInformation("Hello World Change Here!!");
 		}
 	}
 }
