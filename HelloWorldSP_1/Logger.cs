@@ -27,5 +27,4 @@ namespace HelloWorldSP_1
 		}
 		#endregion
 	}
-
 }
